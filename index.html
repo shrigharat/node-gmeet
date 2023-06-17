@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ting Room</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="public/assets/css/styles.css">
+    <link rel="stylesheet" href="public/assets/css/bootstrap.min.css">
+</head>
+<body>
+
+    <main class="d-flex flex-column home-wrap">
+        <div class="g-top text-light">
+            <div class="top-remote-video-show-wrap d-flex">
+                <div id="meetingContainer" class="d-none w-75">
+                    <div class="call-wrap" style="background-color: black;">
+                        <div class="video-wrap d-flex flex-wrap" id="divUsers">
+                            <!-- local video -->
+                            <div id="me" class="userbox display-center flex-column">
+                                <h2 class="displa-center" style="font-size: 14px;">User name</h2>
+                                <div class="display-center">
+                                    <video autoplay muted id="localVideoPlayer"></video>
+                                </div>
+                            </div>
+
+                            <!-- remote video  -->
+                            <div id="otherTemplate" class="userbox display-center flex-column d-none">
+                                <h2 class="displa-center" style="font-size: 14px;">User name</h2>
+                                <div class="display-center">
+                                    <video autoplay muted></video>
+                                    <audio autoplay controls muted class="d-none"></audio>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="g-top-left bg-light text-secondary w-25 d-flex align-items-center justify-content-between pl-2 pr-2">
+                <div class="top-left-participant-wrap pt-2 cursor-pointer">
+                    <div class="top-left-participant-icon displa-center">
+                        <span class="material-icons">people</span>
+                    </div>
+                    <div class="top-left-participant-count"></div>
+                </div>
+                <div class="top-left-chat-wrapper pt-2 cursor-pointer displa-center">
+                    <span class="material-icons">message</span>
+                </div>
+                <div class="top-left-time-wrap"></div>
+            </div>
+        </div>
+        <div class="g-bottom bg-light m-0 d-flex justify-content-between align-items-center">
+            <div class="bottom-left">
+                <div class="display-center cursor-pointer meeting-details-button">
+                    <span>Meeting details</span>
+                    <span class="material-icons">keyboard_arrow_down</span>
+                </div>
+            </div>
+            <div class="bottom-middle d-flex justify-content-center align-items-center" style="height: 10vh;">
+                <div class="mic-toggle-wrap action-icon-style display-center mr-2 cursor-pointer" id="micMuteToggle">
+                    <span class="material-icons">mic_off</span>
+                </div>
+                <div class="end-call-wrap action-icon-style display-center mr-2 cursor-pointer">
+                    <span class="material-icons text-danger">call</span>
+                </div>
+                <div class="video-toggle-wrap action-icon-style display-center mr-2 cursor-pointer">
+                    <span class="material-icons">videocam_off</span>
+                </div>
+            </div>
+            <div class="bottom-right d-flex justify-content-center align-items-center mr-3" style="height: 10vh;">
+                <div class="present-now-wrap d-flex justify-content-center align-items-center mr-5 cursor-pointer p-2">
+                    <span class="material-icons pr-2">present_to_all</span>
+                    <div>Present now</div>
+                </div>
+                <div class="option-wrap cursor-pointer display-center">
+                    <span class="material-icons">more_vert</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
